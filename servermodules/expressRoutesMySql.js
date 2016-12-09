@@ -23,6 +23,13 @@ connection.end();
 module.exports = function(app) {
  //HighCharts api calls to database
 app.get('/api/lineArea', function(req,res) {
+  var connection = mysql.createConnection
+({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'charts'
+});
  connection.connect();
 console.log('coming here to get high chart column');
 //A query for lineArea
@@ -39,6 +46,13 @@ connection.end();
 });
 
 app.get('/api/columnBar', function(req,res) {
+  var connection = mysql.createConnection
+({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'charts'
+});
  connection.connect();
 console.log('coming here to get high chart column');
 //A query for lineArea
@@ -55,6 +69,13 @@ connection.end();
 });
 
 app.get('/api/scatterBubble', function(req,res) {
+  var connection = mysql.createConnection
+({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'charts'
+});
  connection.connect();
 console.log('coming here to get high chart column');
 //A query for lineArea
@@ -71,6 +92,13 @@ connection.end();
 });
 
 app.get('/api/Geographical', function(req,res) {
+  var connection = mysql.createConnection
+({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'charts'
+});
  connection.connect();
 console.log('coming here to get high chart column');
 //A query for lineArea
