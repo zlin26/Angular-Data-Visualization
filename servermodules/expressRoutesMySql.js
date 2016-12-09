@@ -8,7 +8,7 @@ var connection = mysql.createConnection
     database : 'charts'
 });
 
-console.log('connecting test to database');
+console.log('test database connection');
 connection.connect();
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
