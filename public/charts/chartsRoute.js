@@ -11,7 +11,7 @@ angular.module('charts')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'charts/highcharts/highChart1.html',
+                        templateUrl: 'charts/highcharts/lineArea.html',
                         controller: 'lineAreaCtrl'
                     }
                 },
@@ -26,7 +26,7 @@ angular.module('charts')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'charts/highcharts/highChart2.html',
+                        templateUrl: 'charts/highcharts/columnBar.html',
                         controller: 'columnBarCtrl'
                     }
                 },
@@ -41,7 +41,7 @@ angular.module('charts')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'charts/highcharts/highChart3.html',
+                        templateUrl: 'charts/highcharts/scatterBubble.html',
                         controller: 'scatterBubbleCtrl'
                     }
                 },
@@ -56,7 +56,7 @@ angular.module('charts')
                 },
                 views: {
                     'content@': {
-                        templateUrl: 'charts/highcharts/highChart4.html',
+                        templateUrl: 'charts/highcharts/Geographical.html',
                         controller: 'GeographicalCtrl'
                     }
                 },
