@@ -20,7 +20,7 @@ angular.module('charts')
             console.log('Error: ' + data);
           });
       }
-$(function () {
+$(function callChart() {
 
     // Prepare demo data
     var data = [
