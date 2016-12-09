@@ -19,9 +19,9 @@ connection.query('SELECT * from collegesbystate',
 });
 connection.end();
 
-module.exports = function(app) {
+module.exports = function(app, connection) {
  //HighCharts api calls to database
-app.get('/api/lineArea', function(req,res) {
+app.get('/api/lineArea', function(req,res, connection) {
  connection.connect();
 console.log('coming here to get high chart column');
 //A query for lineArea
