@@ -206,7 +206,7 @@ $(function callChart() {
 
         series : [{
             data : data,
-            mapData: Highcharts.maps['charts/us-wa-all.js'],
+            mapData: Highcharts.maps['us-wa-all'],
             joinBy: 'hc-key',
             name: 'Random data',
             states: {
