@@ -35,9 +35,9 @@ console.log('coming here to get high chart column');
 //A query for lineArea
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
-        if (!err)
-          console.log('The solution is: ', rows);
-       else
+        if (err)
+          //console.log('The solution is: ', rows);
+       //else
           console.log('Error while performing Query.', err);
        res.send(rows);
 
@@ -58,9 +58,9 @@ console.log('coming here to get high chart column');
 //A query for lineArea
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
-        if (!err)
-          console.log('The solution is: ', rows);
-       else
+        if (err)
+          //console.log('The solution is: ', rows);
+       //else
           console.log('Error while performing Query.', err);
        res.send(rows);
 
@@ -81,9 +81,9 @@ console.log('coming here to get high chart column');
 //A query for lineArea
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
-        if (!err)
-          console.log('The solution is: ', rows);
-       else
+        if (err)
+          //console.log('The solution is: ', rows);
+       //else
           console.log('Error while performing Query.', err);
        res.send(rows);
 
@@ -104,9 +104,9 @@ console.log('coming here to get high chart column');
 //A query for lineArea
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
-        if (!err)
-          console.log('The solution is: ', rows);
-       else
+        if (err)
+          //console.log('The solution is: ', rows);
+       //else
           console.log('Error while performing Query.', err);
        res.send(rows);
 
