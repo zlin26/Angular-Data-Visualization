@@ -7,7 +7,20 @@ var connection = mysql.createConnection
     password : '123456',
     database : 'charts'
 });
-console.log('connecting to database');
+
+console.log('connecting test to database');
+connection.connect();
+connection.query('SELECT * from collegesbystate',
+      function(err, rows, fields) {
+        if (!err)
+          console.log('Sucessful connection!');
+       else
+          console.log('Error while performing Query.', err);
+       res.send(rows);
+
+});
+connection.end();
+
 module.exports = function(app) {
  //HighCharts api calls to database
 app.get('/api/linArea', function(req,res) {
