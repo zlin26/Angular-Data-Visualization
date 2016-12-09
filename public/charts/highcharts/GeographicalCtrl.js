@@ -9,11 +9,11 @@ angular.module('charts')
     function serverCall() {
         $http.get('/api/Geographical')
           .success(function(data) {
-            console.log('coming to the controller:', data);
+            //console.log('coming to the controller:', data);
             $scope.charts = {};
             $scope.charts = data;
 
-            console.log('value of chart data :', $scope.charts);
+            //console.log('value of chart data :', $scope.charts);
             callChart();
           })
           .error(function(data) {
@@ -206,7 +206,7 @@ $(function callChart() {
 
         series : [{
             data : data,
-            mapData: Highcharts.maps['us-wa-all'],
+            mapData: Highcharts.maps['us-wa-all.js'],
             joinBy: 'hc-key',
             name: 'Random data',
             states: {

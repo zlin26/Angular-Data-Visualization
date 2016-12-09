@@ -1,3 +1,4 @@
+console.log('Enter us-wa-all.js');
 Highcharts.maps["countries/us/us-wa-all"] = {"title":"Washington","version":"1.1.2","type":"FeatureCollection","copyright":"Copyright (c) 2015 Highsoft AS, Based on data from The United States Census Bureau","copyrightShort":"USA Census Bureau","copyrightUrl":"http://www.census.gov","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:EPSG:102348"}},"hc-transform":{"default":{"crs":"+proj=lcc +lat_1=47.5 +lat_2=48.73333333333333 +lat_0=47 +lon_0=-120.8333333333333 +x_0=500000 +y_0=0 +ellps=GRS80 +units=m +no_defs","scale":0.0011793153154,"jsonres":15.5,"jsonmarginX":-999,"jsonmarginY":9851.0,"xoffset":209966.996573,"yoffset":228415.528134}},
 "features":[
 {"type":"Feature","id":"US.WA.043","properties":{"hc-group":"admin2","hc-middle-x":0.53,"hc-middle-y":0.52,"hc-key":"us-wa-043","hc-a2":"LI","fips":"53043","name":"Lincoln"},
