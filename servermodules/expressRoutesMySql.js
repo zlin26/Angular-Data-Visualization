@@ -1,3 +1,4 @@
+console.log('entered expressRoutesMysql.js');
 var mysql      = require('mysql');
 var connection = mysql.createConnection
 ({
@@ -6,6 +7,7 @@ var connection = mysql.createConnection
     password : '123456',
     database : 'charts'
 });
+console.log('connecting to database');
 module.exports = function(app) {
  //HighCharts api calls to database
 app.get('/api/linArea', function(req,res) {
