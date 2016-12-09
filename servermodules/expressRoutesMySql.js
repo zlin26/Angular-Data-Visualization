@@ -21,7 +21,7 @@ connection.end();
 
 module.exports = function(app) {
  //HighCharts api calls to database
-app.get('/api/linArea', function(req,res) {
+app.get('/api/lineArea', function(req,res) {
  connection.connect();
 console.log('coming here to get high chart column');
 //A query for lineArea
