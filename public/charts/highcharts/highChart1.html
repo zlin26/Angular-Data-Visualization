@@ -1,8 +1,15 @@
 <div ng-cloak>
-    <div class="row">
+    <div class="row content">
+    	<div class="col-sm-2 sidenav">
+      		<div ng-include="'charts/linkInclude.html'"></div>
+    	</div>
 
-    <div ng-include="'charts/linkInclude.html'"></div>
-
-    <div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+    	<div class="col-sm-8 text-left">
+      		<h1>Line and Area Charts</h1>
+      		<p>Welcome to data visualization. We will go over the charts in this page.</p>
+      		<hr>
+      		<div id="container" style="width: 800px; height: 400px; margin: 0 auto"></div>
+      	</div>
+	</div>
 </body>
 </html>

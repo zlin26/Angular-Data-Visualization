@@ -19,6 +19,13 @@ app.use(bodyParser.json()); 									// parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
+var connection = mysql.createConnection
+({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'charts'
+});
 // routes ======================================================================
 require('./servermodules/expressRoutesMySql.js')(app);
 // require('./servermodules/expressRoutes.js')(app);

@@ -1,13 +1,6 @@
 console.log('entered expressRoutesMysql.js');
 var mysql      = require('mysql');
-var connection = mysql.createConnection
-({
-    host     : 'localhost',
-    user     : 'root',
-    password : '123456',
-    database : 'charts'
-});
-
+// Connection is defined as a global variable
 console.log('test database connection');
 connection.connect();
 connection.query('SELECT * from collegesbystate',
@@ -19,9 +12,9 @@ connection.query('SELECT * from collegesbystate',
 });
 connection.end();
 
-module.exports = function(app, connection) {
+module.exports = function(app) {
  //HighCharts api calls to database
-app.get('/api/lineArea', function(req,res, connection) {
+app.get('/api/lineArea', function(req,res) {
  connection.connect();
 console.log('coming here to get high chart column');
 //A query for lineArea
