@@ -16,8 +16,6 @@ connection.query('SELECT * from collegesbystate',
           console.log('Sucessful connection!');
        else
           console.log('Error while performing Query.', err);
-       res.send(rows);
-
 });
 connection.end();
 
