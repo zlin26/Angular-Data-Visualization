@@ -1,5 +1,5 @@
 console.log('entered expressRoutesMysql.js');
-var mysql      = require('mysql');
+var mysql = require('mysql');
 // Connection is defined as a global variable
 console.log('test database connection');
 connection.connect();
