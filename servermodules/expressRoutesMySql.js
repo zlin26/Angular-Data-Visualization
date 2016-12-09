@@ -1,6 +1,14 @@
 console.log('entered expressRoutesMysql.js');
 //var mysql = require('mysql');
 // Connection is defined as a global variable
+var mysql = require('mysql');
+var connection = mysql.createConnection
+({
+    host     : 'localhost',
+    user     : 'root',
+    password : '123456',
+    database : 'charts'
+});
 console.log('test database connection');
 connection.connect();
 connection.query('SELECT * from collegesbystate',
