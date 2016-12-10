@@ -31,7 +31,7 @@ app.get('/api/lineArea', function(req,res) {
     database : 'charts'
 });
  connection.connect();
-console.log('coming here to get high chart column');
+console.log('Doing lineArea query');
 //A query for lineArea
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
@@ -54,7 +54,7 @@ app.get('/api/columnBar', function(req,res) {
     database : 'charts'
 });
  connection.connect();
-console.log('coming here to get high chart column');
+console.log('Doing columnBar query');
 //A query for lineArea
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
@@ -77,7 +77,7 @@ app.get('/api/scatterBubble', function(req,res) {
     database : 'charts'
 });
  connection.connect();
-console.log('coming here to get high chart column');
+console.log('Doing scatterBubble query');
 //A query for lineArea
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
@@ -100,7 +100,7 @@ app.get('/api/Geographical', function(req,res) {
     database : 'charts'
 });
  connection.connect();
-console.log('coming here to get high chart column');
+console.log('Doing Geographical query');
 //A query for lineArea
 connection.query('SELECT * from collegesbystate',
       function(err, rows, fields) {
