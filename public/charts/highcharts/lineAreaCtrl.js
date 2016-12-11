@@ -35,7 +35,7 @@ angular.module('charts')
         larceny.push(Date.UTC(value.year, value.month), value.larceny);
         sex.push(Date.UTC(value.year, value.month),value.sexual_assault);
        });
-        console.log("burglary is", burglary)
+        console.log("burglary is", burglary);
     Highcharts.chart('container', {
         chart: {
             type: 'spline'
