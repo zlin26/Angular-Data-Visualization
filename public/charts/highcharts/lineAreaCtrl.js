@@ -12,12 +12,12 @@ angular.module('charts')
         var sex = [];
         $scope.charts.forEach(function(value,key) 
             {
-                year.push(value.year);
-                month.push(value.month);
-                burglary.push(value.burglary);
-                homicide.push(value.homicide);
-                larceny.push(value.larceny);
-                sex.push(value.sexual_assault);
+                //year.push(value.year);
+                //month.push(value.month);
+                burglary.push(Date.UTC(value.year, value.month), value.burglary);
+                homicide.push(Date.UTC(value.year, value.month),value.homicide);
+                larceny.push(Date.UTC(value.year, value.month),value.larceny);
+                sex.push(Date.UTC(value.year, value.month),value.sexual_assault);
             }
         );
         console.log("burglary is", burglary);
@@ -29,13 +29,13 @@ angular.module('charts')
             text: 'Big Seattle Area Crime Amount'
         },
         subtitle: {
-            text: 'among types'
+            text: 'Among Types'
         },
         xAxis: {
             type: 'datetime',
             dateTimeLabelFormats: { // don't display the dummy year
                 month: '%Y-%m'
-                //year: '%Y'
+                year: '%Y'
             },
             title: {
                 text: 'Date'
