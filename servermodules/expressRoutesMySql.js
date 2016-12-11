@@ -33,14 +33,13 @@ app.get('/api/lineArea', function(req,res) {
  connection.connect();
 console.log('Doing lineArea query');
 //A query for lineArea
-connection.query('SELECT * from collegesbystate',
+connection.query('SELECT * FROM lineArea;',
       function(err, rows, fields) {
         if (err)
           //console.log('The solution is: ', rows);
        //else
           console.log('Error while performing Query.', err);
        res.send(rows);
-
 });
 connection.end();
 });

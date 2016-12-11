@@ -21,21 +21,29 @@ angular.module('charts')
           });
       }
       $(function callChart() {
+        $scope.charts.forEach(function(value,key) {
+        year.push(value.year);
+        month.push(value.month);
+        burglary.push(value.burglary);
+        homicide.push(value.homicide);
+        larceny.push(value.larceny);
+        sex.push(value.sexual_assault)
+       });
     Highcharts.chart('container', {
         chart: {
             type: 'spline'
         },
         title: {
-            text: 'Snow depth at Vikjafjellet, Norway'
+            text: 'Big Seattle Area Crime Amount'
         },
         subtitle: {
-            text: 'Irregular time data in Highcharts JS'
+            text: 'among types'
         },
         xAxis: {
             type: 'datetime',
             dateTimeLabelFormats: { // don't display the dummy year
                 month: '%e. %b',
-                year: '%b'
+                year: '%e. %b'
             },
             title: {
                 text: 'Date'
@@ -43,7 +51,7 @@ angular.module('charts')
         },
         yAxis: {
             title: {
-                text: 'Snow depth (m)'
+                text: 'Crime amount'
             },
             min: 0
         },
@@ -60,6 +68,26 @@ angular.module('charts')
             }
         },
 
+        series:
+        [
+        {
+            name: 'Burglary'
+            data: burglary
+        },
+        {
+            name: "Homicide"
+            data: homicide
+        },
+        {
+            name: "Larceny"
+            data: larceny
+        },
+        {
+            name: "Sexual Assault"
+            data: sex
+        }
+        ]
+/*
         series: [{
             name: 'Winter 2012-2013',
             // Define the data points. All series have a dummy year
@@ -129,6 +157,7 @@ angular.module('charts')
                 [Date.UTC(1971, 5, 23), 1.08]
             ]
         }]
+        */
     });
   });
 });
