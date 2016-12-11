@@ -24,10 +24,10 @@ angular.module('charts')
         $scope.charts.forEach(function(value,key) {
         year.push(value.year);
         month.push(value.month);
-        burglary.push(value.burglary);
-        homicide.push(value.homicide);
-        larceny.push(value.larceny);
-        sex.push(value.sexual_assault)
+        burglary.push(Date.UTC(value.year, value.month), value.burglary);
+        homicide.push(Date.UTC(value.year, value.month),value.homicide);
+        larceny.push(Date.UTC(value.year, value.month), value.larceny);
+        sex.push(Date.UTC(value.year, value.month),value.sexual_assault)
        });
     Highcharts.chart('container', {
         chart: {
