@@ -6,7 +6,8 @@ angular.module('charts')
     	function init() {
         serverCall();
       }
-    function serverCall() {
+    function serverCall() 
+    {
         $http.get('/api/Geographical')
           .success(function(data) {
             //console.log('coming to the controller:', data);
@@ -14,16 +15,17 @@ angular.module('charts')
             $scope.charts = data;
 
             //console.log('value of chart data :', $scope.charts);
+            console.log('Want to call callChart');
             callChart();
           })
           .error(function(data) {
             console.log('Error: ' + data);
           });
       }
-$(function callChart() {
+    $(function callChart() {
 
-    // Prepare demo data
-    var data = [
+        // Prepare demo data
+        var data = [
         {
             "hc-key": "us-wa-075",
             "value": 0
@@ -180,11 +182,11 @@ $(function callChart() {
             "hc-key": "us-wa-077",
             "value": 38
         }
-    ];
+        ];
 
-console.log('Enter us-wa-all.js');
+        console.log('Enter us-wa-all.js');
     // Initiate the chart
-    $('#container').highcharts('Map', {
+        $('#container').highcharts('Map', {
 
         title : {
             text : 'Highmaps basic demo'
