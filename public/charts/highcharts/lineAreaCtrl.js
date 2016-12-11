@@ -16,7 +16,7 @@ angular.module('charts')
                 //month.push(value.month);
                 burglary.push(Date.UTC(value.year, value.month), value.burglary);
                 homicide.push(Date.UTC(value.year, value.month),value.homicide);
-                larceny.push(DDate.UTC(value.year, value.month),value.larceny);
+                larceny.push(Date.UTC(value.year, value.month),value.larceny);
                 sex.push(Date.UTC(value.year, value.month),value.sexual_assault);
             }
         );
