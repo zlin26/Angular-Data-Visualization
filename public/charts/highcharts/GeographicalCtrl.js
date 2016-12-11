@@ -217,7 +217,7 @@ angular.module('charts').controller
                     [
                     {
                         data : data,
-                        mapData: callmap(),
+                        mapData: Highcharts.maps["countries/us/us-wa-all"]
                         joinBy: 'hc-key',
                         name: 'Random data',
                         states: 
