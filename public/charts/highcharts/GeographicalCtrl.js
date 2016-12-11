@@ -22,18 +22,17 @@ angular.module('charts')
             console.log('Error: ' + data);
           });
       }
-    /*
+    
     $(function callChart() {
-
-        // Prepare demo data
-        var data = [
+          // Prepare demo data
+    var data = [
         {
             "hc-key": "us-wa-075",
             "value": 0
         },
         {
             "hc-key": "us-wa-043",
-            "value": 10
+            "value": 1
         },
         {
             "hc-key": "us-wa-069",
@@ -183,11 +182,10 @@ angular.module('charts')
             "hc-key": "us-wa-077",
             "value": 38
         }
-        ];
+    ];
 
-        console.log('Enter us-wa-all.js');
     // Initiate the chart
-        $('#container').highcharts('Map', {
+    $('#container').highcharts('Map', {
 
         title : {
             text : 'Highmaps basic demo'
@@ -210,7 +208,7 @@ angular.module('charts')
 
         series : [{
             data : data,
-            mapData: Highcharts.maps['us-wa-all.js'],
+            mapData: Highcharts.maps['countries/us/us-wa-all'],
             joinBy: 'hc-key',
             name: 'Random data',
             states: {
@@ -224,7 +222,10 @@ angular.module('charts')
             }
         }]
     });
-});*/
+});
+
+    });
+/*
     $(function callChart() {
     Highcharts.chart('container', {
 
@@ -339,4 +340,5 @@ angular.module('charts')
         }]
     });
     });
+*/
 });
