@@ -14,10 +14,10 @@ angular.module('charts')
             {
                 year.push(value.year);
                 month.push(value.month);
-                //burglary.push(value.burglary);
-                //homicide.push(value.homicide);
-                //larceny.push(value.larceny);
-                //sex.push(value.sexual_assault);
+                burglary.push(value.burglary);
+                homicide.push(value.homicide);
+                larceny.push(value.larceny);
+                sex.push(value.sexual_assault);
             }
         );
         console.log("burglary is", burglary);
