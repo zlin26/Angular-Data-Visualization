@@ -21,13 +21,19 @@ angular.module('charts')
           });
       }
       $(function callChart() {
+        var burglary = []
+        var year = []
+        var month =[]
+        var homicide =[]
+        var larceny = []
+        var sex = []
         $scope.charts.forEach(function(value,key) {
         year.push(value.year);
         month.push(value.month);
         burglary.push(Date.UTC(value.year, value.month), value.burglary);
         homicide.push(Date.UTC(value.year, value.month),value.homicide);
         larceny.push(Date.UTC(value.year, value.month), value.larceny);
-        sex.push(Date.UTC(value.year, value.month),value.sexual_assault)
+        sex.push(Date.UTC(value.year, value.month),value.sexual_assault);
        });
     Highcharts.chart('container', {
         chart: {
