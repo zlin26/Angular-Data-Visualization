@@ -1,31 +1,43 @@
 'use strict';
 
-angular.module('charts')
-    .controller('GeographicalCtrl', function ($scope,$http) {
-      init();
-    	function init() {
-        serverCall();
-      }
-    function serverCall() 
+angular.module('charts').controller
+('GeographicalCtrl', 
+    function ($scope,$http)
     {
-        $http.get('/api/Geographical')
-          .success(function(data) {
-            //console.log('coming to the controller:', data);
-            $scope.charts = {};
-            $scope.charts = data;
+        init();
+    	function init()
+        {
+            serverCall();
+        }
+        function serverCall() 
+        {
+            $http.get('/api/Geographical')
+            .success
+            (
+                function(data)
+                {
+                //console.log('coming to the controller:', data);
+                    $scope.charts = {};
+                    $scope.charts = data;
 
-            //console.log('value of chart data :', $scope.charts);
-            console.log('Want to call callChart');
-            callChart();
-          })
-          .error(function(data) {
-            console.log('Error: ' + data);
-          });
-      }
-    
-    $(function callChart() {
-          // Prepare demo data
-    var data = [
+                    //console.log('value of chart data :', $scope.charts);
+                    console.log('Want to call callChart');
+                    callChart();
+                }
+            )
+            .error
+            (
+                function(data)
+                {
+                    console.log('Error: ' + data);
+                }
+            );
+        }
+        $(function callChart() 
+        {
+            // Prepare demo data
+            var data = 
+            [
         {
             "hc-key": "us-wa-075",
             "value": 0
@@ -182,49 +194,48 @@ angular.module('charts')
             "hc-key": "us-wa-077",
             "value": 38
         }
-    ];
+            ];
 
-    // Initiate the chart
-    $('#container').highcharts('Map', {
+            // Initiate the chart
+            $('#container').highcharts
+            (
+                'Map',
+                {
+                    title : {text : 'Highmaps basic demo'},
+                    subtitle : {text : 'Source map: <a href="https://code.highcharts.com/mapdata/countries/us/us-wa-all.js">Washington</a>'},
+                    mapNavigation:
+                    {
+                        enabled: true,
+                        buttonOptions:
+                        {
+                            verticalAlign: 'bottom'
+                        }
+                    },
+                    colorAxis:{min: 0},
 
-        title : {
-            text : 'Highmaps basic demo'
-        },
-
-        subtitle : {
-            text : 'Source map: <a href="https://code.highcharts.com/mapdata/countries/us/us-wa-all.js">Washington</a>'
-        },
-
-        mapNavigation: {
-            enabled: true,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
-
-        colorAxis: {
-            min: 0
-        },
-
-        series : [{
-            data : data,
-            mapData: Highcharts.maps['countries/us/us-wa-all'],
-            joinBy: 'hc-key',
-            name: 'Random data',
-            states: {
-                hover: {
-                    color: '#a4edba'
+                    series : 
+                    [
+                    {
+                        data : data,
+                        mapData: Highcharts.maps['countries/us/us-wa-all'],
+                        joinBy: 'hc-key',
+                        name: 'Random data',
+                        states: 
+                        {
+                            hover: {color: '#a4edba'}
+                        },
+                        dataLabels:
+                        {
+                            enabled: true,
+                            format: '{point.name}'
+                        }
+                    }
+                    ]
                 }
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}'
-            }
-        }]
-    });
-});
+            );
+        }
+);
 
-    });
 /*
     $(function callChart() {
     Highcharts.chart('container', {
@@ -341,4 +352,3 @@ angular.module('charts')
     });
     });
 */
-});

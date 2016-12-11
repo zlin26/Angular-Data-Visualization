@@ -12,7 +12,7 @@ angular.module('charts')
             //console.log('coming to the controller:', data);
             $scope.charts = {};
             $scope.charts = data;
-
+            console.log("lineArea query done!")
             //console.log('value of chart data :', $scope.charts);
             callChart();
           })
