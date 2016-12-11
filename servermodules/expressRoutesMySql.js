@@ -86,7 +86,6 @@ connection.query('SELECT * from collegesbystate',
        //else
           console.log('Error while performing Query.', err);
        res.send(rows);
-
 });
 connection.end();
 });

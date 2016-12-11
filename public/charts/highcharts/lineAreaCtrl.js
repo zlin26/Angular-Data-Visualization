@@ -9,7 +9,7 @@ angular.module('charts')
       function serverCall() {
         $http.get('/api/lineArea')
           .success(function(data) {
-            //console.log('coming to the controller:', data);
+            console.log('coming to the controller:', data);
             $scope.charts = {};
             $scope.charts = data;
             console.log("lineArea query done!")
