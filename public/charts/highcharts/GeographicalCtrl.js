@@ -231,7 +231,7 @@ angular.module('charts').controller
                     ]
                 }
             );
-        }
+        });
     }
     init();
 );
