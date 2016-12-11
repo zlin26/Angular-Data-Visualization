@@ -48,8 +48,8 @@ angular.module('charts')
         xAxis: {
             type: 'datetime',
             dateTimeLabelFormats: { // don't display the dummy year
-                month: '%b '\ '%y',
-                year: '%y'
+                month: '%y',
+                year: '%Y'
             },
             title: {
                 text: 'Date'
