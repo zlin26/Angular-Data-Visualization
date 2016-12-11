@@ -78,19 +78,19 @@ angular.module('charts')
         series:
         [
         {
-            name: 'Burglary'
+            name: 'Burglary',
             data: burglary
         },
         {
-            name: "Homicide"
+            name: "Homicide",
             data: homicide
         },
         {
-            name: "Larceny"
+            name: "Larceny",
             data: larceny
         },
         {
-            name: "Sexual Assault"
+            name: "Sexual Assault",
             data: sex
         }
         ]
