@@ -33,11 +33,9 @@ angular.module('charts').controller
                 }
             );
         }
-        $(function callChart() 
-        {
+        $(function callChart() {
             // Prepare demo data
-            var data = 
-            [
+            var data = [
         {
             "hc-key": "us-wa-075",
             "value": 0
@@ -194,7 +192,7 @@ angular.module('charts').controller
             "hc-key": "us-wa-077",
             "value": 38
         }
-            ];
+        ];
 
             // Initiate the chart
             $('#container').highcharts
@@ -233,8 +231,9 @@ angular.module('charts').controller
                     ]
                 }
             );
-        init();
         }
+    }
+    init();
 );
 
 /*
