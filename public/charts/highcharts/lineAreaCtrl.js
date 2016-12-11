@@ -14,10 +14,10 @@ angular.module('charts')
             {
                 //year.push(value.year);
                 //month.push(value.month);
-                burglary.push(Date.UTC(value.year, value.month), value.burglary);
-                homicide.push(Date.UTC(value.year, value.month),value.homicide);
-                larceny.push(Date.UTC(value.year, value.month),value.larceny);
-                sex.push(Date.UTC(value.year, value.month),value.sexual_assault);
+                burglary.push(Date(Date.UTC(value.year, value.month)), value.burglary);
+                homicide.push(Date(Date.UTC(value.year, value.month)),value.homicide);
+                larceny.push(Date(Date.UTC(value.year, value.month)),value.larceny);
+                sex.push(Date(Date.UTC(value.year, value.month)),value.sexual_assault);
             }
         );
         console.log("burglary is", burglary);
