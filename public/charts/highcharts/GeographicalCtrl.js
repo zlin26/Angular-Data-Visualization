@@ -85,8 +85,8 @@ angular.module('charts').controller
                     ]
                 }
             );
-        }
-    init(); 
+        })
+    init();
 });
 
 /*
