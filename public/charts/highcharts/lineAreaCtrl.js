@@ -10,7 +10,7 @@ angular.module('charts')
         var homicide =[]
         var larceny = []
         var sex = []
-        $scope.charts.forEach(value,function(value,key) 
+        scope.charts.forEach(value,function(value,key) 
             {
                 year.push(value.year);
                 month.push(value.month);
