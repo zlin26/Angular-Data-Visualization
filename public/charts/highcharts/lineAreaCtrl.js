@@ -2,7 +2,7 @@
 
 angular.module('charts')
     .controller('lineAreaCtrl', function ($scope,$http) {
-        $(function callChart() 
+        function callChart() 
         {
         var burglary = [];
         var year = [];
@@ -151,11 +151,9 @@ angular.module('charts')
         }]
         */
     });
-  });
-    	function init() {
-        serverCall();
-      }
-      function serverCall() {
+  };
+    	function init() {serverCall();}
+        function serverCall() {
         $http.get('/api/lineArea')
           .success(function(data) {
             console.log('coming to the controller:', data);
