@@ -2,25 +2,9 @@
 
 angular.module('charts')
     .controller('lineAreaCtrl', function ($scope,$http) {
-      init();
-    	function init() {
-        serverCall();
-      }
-      function serverCall() {
-        $http.get('/api/lineArea')
-          .success(function(data) {
-            console.log('coming to the controller:', data);
-            $scope.charts = {};
-            $scope.charts = data;
-            console.log("lineArea query done!")
-            //console.log('value of chart data :', $scope.charts);
-            callChart();
-          })
-          .error(function(data) {
-            console.log('Error: ' + data);
-          });
-      }
-      $(function callChart() {
+      
+            $(function callChart() 
+      {
         var burglary = []
         var year = []
         var month =[]
@@ -167,4 +151,23 @@ angular.module('charts')
         */
     });
   });
+    	function init() {
+        serverCall();
+      }
+      function serverCall() {
+        $http.get('/api/lineArea')
+          .success(function(data) {
+            console.log('coming to the controller:', data);
+            $scope.charts = {};
+            $scope.charts = data;
+            console.log("lineArea query done!")
+            console.log('value of chart data :', $scope.charts);
+            callChart();
+          })
+          .error(function(data) {
+            console.log('Error: ' + data);
+          });
+      }
+
+init();
 });

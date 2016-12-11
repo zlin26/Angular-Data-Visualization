@@ -2,7 +2,7 @@
 
 angular.module('charts')
     .controller('scatterBubbleCtrl', function ($scope,$http) {
-      init();
+      //init();
     	function init() {
         serverCall();
       }
@@ -134,5 +134,5 @@ angular.module('charts')
         }]
     });
     });
-
+init();
 });
