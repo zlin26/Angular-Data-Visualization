@@ -14,10 +14,10 @@ angular.module('charts')
             {
                 //year.push(value.year);
                 //month.push(value.month);
-                burglary.push(Date(Date.UTC(value.year, value.month)), value.burglary);
-                homicide.push(Date(Date.UTC(value.year, value.month)),value.homicide);
-                larceny.push(Date(Date.UTC(value.year, value.month)),value.larceny);
-                sex.push(Date(Date.UTC(value.year, value.month)),value.sexual_assault);
+                burglary.push(value.burglary, Date.UTC(value.year, value.month));
+                homicide.push(value.homicide, Date.UTC(value.year, value.month));
+                larceny.push(value.larceny, Date.UTC(value.year, value.month));
+                sex.push(value.sexual_assault, Date.UTC(value.year, value.month));
             }
         );
         console.log("burglary is", burglary);
@@ -49,7 +49,7 @@ angular.module('charts')
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br>',
-            pointFormat: '{point.x:%Y-%m}: {point.y:.2f}'
+            pointFormat: '{point.x:%Y-%m}: {point.y:.0f}'
         },
 
         plotOptions: {
