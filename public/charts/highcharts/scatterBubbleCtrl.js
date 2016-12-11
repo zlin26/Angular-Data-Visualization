@@ -135,38 +135,4 @@ angular.module('charts')
     });
     });
 
-    /*
-        function callChart() {
-      var state = [];
-      var numcolleges = [];
-      $scope.charts.forEach(function(value,key) {
-        console.log('value of value :', value);
-        state.push(value.state);
-        numcolleges.push(value.numcolleges);
-       });
-       console.log('state: ', state);
-       console.log('numcolleges: ', numcolleges);
-       Highcharts.chart('container', {
-            chart: {
-                type: 'column'
-            },
-            series: [{
-            name: 'States',
-            data: numcolleges
-            }],
-            title: {
-                text: 'States with number of colleges'
-            },
-            xAxis: {
-              categories: state
-            },
-            yAxis: {
-                title: {
-                    text: 'No of colleges'
-                }
-            }
-        });
-
-    }
-    */
-    });
+});
