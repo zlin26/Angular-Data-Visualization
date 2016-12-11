@@ -4,12 +4,12 @@ angular.module('charts')
     .controller('lineAreaCtrl', function ($scope,$http) {
         $(function callChart() 
         {
-        var burglary = []
-        var year = []
-        var month =[]
-        var homicide =[]
-        var larceny = []
-        var sex = []
+        var burglary = [];
+        var year = [];
+        var month =[];
+        var homicide =[];
+        var larceny = [];
+        var sex = [];
         $scope.charts.forEach(value,function(value,key) 
             {
                 year.push(value.year);
