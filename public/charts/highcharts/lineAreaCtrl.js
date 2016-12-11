@@ -32,11 +32,11 @@ angular.module('charts')
             text: 'among types'
         },
         xAxis: {
-            type: 'datetime',
+            type: 'datetime'/*,
             dateTimeLabelFormats: { // don't display the dummy year
-                month: '%y',
+                month: '%b \'%y',
                 year: '%Y'
-            },
+            },*/
             title: {
                 text: 'Date'
             }
