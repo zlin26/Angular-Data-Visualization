@@ -47,7 +47,8 @@ angular.module('charts')
             },
             labels: {
                 format: '{value}'
-            }
+            },
+            min: 10000
             /*
             ,
             plotLines: [{
@@ -75,7 +76,8 @@ angular.module('charts')
             },
             labels: {
                 format: '{value}'
-            }
+            },
+            min: 10000
             /*,
             
             plotLines: [{
