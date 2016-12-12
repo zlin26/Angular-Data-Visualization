@@ -20,7 +20,7 @@ angular.module('charts')
             console.log('Error: ' + data);
           });
       }
-    function callChart() {
+    $(function callChart() {
     Highcharts.chart('container', {
 
         chart: {
@@ -103,7 +103,7 @@ angular.module('charts')
             pointFormat: '<tr><th colspan="2"><h3>{point.County}</h3></th></tr>' +
                 '<tr><th>Population:</th><td>{point.Population}</td></tr>' +
                 '<tr><th>Business Lisences:</th><td>{point.BusinessLisences}</td></tr>' +
-                '<tr><th>Crime:</th><td>{point.Crime}%</td></tr>',
+                '<tr><th>Crime:</th><td>{point.Crime}</td></tr>',
             footerFormat: '</table>',
             followPointer: true
         },
@@ -1347,6 +1347,6 @@ angular.module('charts')
 ]
         }]
     });
-    };
+    });
     init();
 });
