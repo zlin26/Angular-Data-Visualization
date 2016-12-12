@@ -42,7 +42,7 @@ angular.module('charts')
         },
 
         xAxis: {
-            gridLineWidth: 1,
+            gridLineWidth: 10000,
             title: {
                 text: 'Population'
             },
