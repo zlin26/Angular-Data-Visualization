@@ -25,7 +25,7 @@ angular.module('charts')
 
         chart: {
             type: 'bubble',
-            plotBorderWidth: 1,
+            plotBorderWidth: 5,
             zoomType: 'xy'
         },
 
@@ -44,8 +44,10 @@ angular.module('charts')
         xAxis: {
             title: {
                 text: 'Population'
+            },
+            labels: {
+                format: '{value}'
             }
-            
             /*
             ,
             plotLines: [{
@@ -66,8 +68,13 @@ angular.module('charts')
         },
 
         yAxis: {
+            startOnTick: false,
+            endOnTick: false,
             title: {
                 text: 'BusinessLisences'
+            },
+            labels: {
+                format: '{value}'
             }
             /*,
             
