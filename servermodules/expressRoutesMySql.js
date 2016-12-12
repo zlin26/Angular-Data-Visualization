@@ -78,7 +78,7 @@ app.get('/api/scatterBubble', function(req,res) {
  connection.connect();
 console.log('Doing scatterBubble query');
 //A query for lineArea
-connection.query('SELECT * from columnBar',
+connection.query('SELECT B.population as Population, B.count as BusinessLisences, Crime.crime as Crime, B.year as Year, B.county as County FROM(SELECT C.year as `year`, C.county as `county`, sum(C.count) as crime FROM charts.crime_monthly as C GROUP BY C.year, C.county) Crime INNER JOIN (SELECT * FROM charts.business) B ON B.county = Crime.county and B.`year` = Crime.`year`;',
       function(err, rows, fields) {
         if (err)
           //console.log('The solution is: ', rows);

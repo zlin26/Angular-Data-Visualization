@@ -112,7 +112,8 @@ angular.module('charts')
                 }
             }
         },
-
+        series:data
+/*
         series: [{
             data: [
                 { x: 95, y: 95, z: 13.8, name: 'BE', country: 'Belgium' },
@@ -132,6 +133,7 @@ angular.module('charts')
                 { x: 64, y: 82.9, z: 31.3, name: 'NZ', country: 'New Zealand' }
             ]
         }]
+*/
     });
     });
 init();
