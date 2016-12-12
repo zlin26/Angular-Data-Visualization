@@ -21,18 +21,18 @@ angular.module('charts')
           });
       }
     function callChart() {
-    Highcharts.chart('container', {
-
-        chart: {
+        $(document).ready(function() {
+        var options = 
+        {
+            chart: 
+            {
             type: 'bubble',
             plotBorderWidth: 1,
             zoomType: 'xy'
         },
-
         legend: {
             enabled: false
         },
-
         title: {
             text: 'Woyebuzhidaojiaoshenmehao'
         },
@@ -114,7 +114,14 @@ angular.module('charts')
                 }
             }
         },
-        series:$.getJSON($scope.charts)
+        series:[{}]
+        };
+
+        $.getJSON($scope.charts,function(data) {
+        options.series[0].data = data;
+        var chart = Highcharts.Chart(options);
+        });
+}
 /*
         series: [{
             data: [
