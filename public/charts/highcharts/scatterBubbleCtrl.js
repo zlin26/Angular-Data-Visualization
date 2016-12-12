@@ -138,5 +138,5 @@ angular.module('charts')
 */
     });
     };
-init();
+    init();
 });
