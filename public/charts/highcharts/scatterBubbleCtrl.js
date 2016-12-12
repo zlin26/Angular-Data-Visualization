@@ -115,10 +115,6 @@ angular.module('charts')
         },
 
         series: [{
-            data:$scope.charts
-        }]
-
-        /*series: [{
             data: [
  {
    "x": 21623,
@@ -1346,7 +1342,7 @@ angular.module('charts')
    "country": "yakima "
  }
 ]
-        }]*/
+        }]
 
     });
 });
