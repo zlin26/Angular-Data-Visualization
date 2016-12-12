@@ -42,12 +42,8 @@ angular.module('charts')
         },
 
         xAxis: {
-            gridLineWidth: 10000,
             title: {
                 text: 'Population'
-            },
-            labels: {
-                format: '{value}'
             },
             min:20000
             /*
@@ -70,13 +66,8 @@ angular.module('charts')
         },
 
         yAxis: {
-            startOnTick: false,
-            endOnTick: false,
             title: {
                 text: 'BusinessLisences'
-            },
-            labels: {
-                format: '{value}'
             },
             min:20000/*,
             
