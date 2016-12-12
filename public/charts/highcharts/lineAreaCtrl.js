@@ -5,8 +5,8 @@ angular.module('charts')
         function callChart() 
         {
         var burglary = [];
-        var year = [];
-        var month =[];
+        var date = [];
+        //var month =[];
         var homicide =[];
         var larceny = [];
         var sex = [];
@@ -14,13 +14,19 @@ angular.module('charts')
             {
                 //year.push(value.year);
                 //month.push(value.month);
-                burglary.push(Date.UTC(value.year, value.month), value.burglary);
-                homicide.push(Date.UTC(value.year, value.month),value.homicide);
-                larceny.push(Date.UTC(value.year, value.month),value.larceny);
-                sex.push(Date.UTC(value.year, value.month),value.sexual_assault);
+                date.push(Date.UTC(value.year, value.month))
+                burglary.push(value.burglary);
+                homicide.push(value.homicide);
+                larceny.push(value.larceny);
+                sex.push(value.sexual_assault);
             }
         );
-        console.log("burglary is", burglary);
+        //Date.UTC(value.year, value.month)
+        console.log("date is", date);
+        burglary = date.map((item, idx) => [item, burglary[idx]]);
+        homicide = date.map((item, idx) => [item, homicide[idx]]);
+        larceny = date.map((item, idx) => [item, larceny[idx]]);
+        sex = date.map((item, idx) => [item, sex[idx]]);
     Highcharts.chart('container', {
         chart: {
             type: 'spline'
@@ -32,12 +38,12 @@ angular.module('charts')
             text: 'Among Types'
         },
         xAxis: {
-            /*
+            
             type: 'datetime',
             dateTimeLabelFormats: { // don't display the dummy year
                 month: '%Y-%m',
                 year: '%Y'
-            },*/
+            },
             title: {
                 text: 'Date'
             },
