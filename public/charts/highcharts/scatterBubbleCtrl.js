@@ -44,8 +44,8 @@ angular.module('charts')
         xAxis: {
             title: {
                 text: 'Population'
-            },
-            min:20000
+            }
+            
             /*
             ,
             plotLines: [{
@@ -68,8 +68,8 @@ angular.module('charts')
         yAxis: {
             title: {
                 text: 'BusinessLisences'
-            },
-            min:20000/*,
+            }
+            /*,
             
             plotLines: [{
                 color: 'black',
