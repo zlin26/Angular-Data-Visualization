@@ -114,7 +114,7 @@ angular.module('charts')
                 }
             }
         },
-        series:scope.charts
+        series:$scope.charts
 /*
         series: [{
             data: [
