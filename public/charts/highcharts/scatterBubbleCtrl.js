@@ -144,6 +144,5 @@ angular.module('charts')
         }]
 */
     }
-    }
     init();
 });
