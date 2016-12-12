@@ -20,7 +20,7 @@ angular.module('charts')
             console.log('Error: ' + data);
           });
       }
-    $(function callChart() {
+    function callChart() {
     Highcharts.chart('container', {
 
         chart: {
@@ -34,7 +34,7 @@ angular.module('charts')
         },
 
         title: {
-            text: 'Sugar and fat intake per country'
+            text: 'Woyebuzhidaojiaoshenmehao'
         },
 
         subtitle: {
@@ -44,7 +44,7 @@ angular.module('charts')
         xAxis: {
             gridLineWidth: 1,
             title: {
-                text: 'Daily fat intake'
+                text: 'Population'
             },
             labels: {
                 format: '{value} gr'
@@ -71,7 +71,7 @@ angular.module('charts')
             startOnTick: false,
             endOnTick: false,
             title: {
-                text: 'Daily sugar intake'
+                text: 'BusinessLisences'
             },
             labels: {
                 format: '{value} gr'
@@ -110,7 +110,7 @@ angular.module('charts')
             series: {
                 dataLabels: {
                     enabled: true,
-                    format: '{point.name}'
+                    format: '{point.Year}'
                 }
             }
         },
@@ -137,6 +137,6 @@ angular.module('charts')
         }]
 */
     });
-    });
+    };
 init();
 });
