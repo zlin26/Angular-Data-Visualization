@@ -13,7 +13,7 @@ angular.module('charts')
             $scope.charts = {};
             $scope.charts = data;
 
-            //console.log('value of chart data :', $scope.charts);
+            console.log('value of chart data :', $scope.charts);
             callChart();
           })
           .error(function(data) {
@@ -48,7 +48,8 @@ angular.module('charts')
             },
             labels: {
                 format: '{value} gr'
-            },
+            }
+            /*,
             plotLines: [{
                 color: 'black',
                 dashStyle: 'dot',
@@ -63,7 +64,7 @@ angular.module('charts')
                     text: 'Safe fat intake 65g/day'
                 },
                 zIndex: 3
-            }]
+            }]*/
         },
 
         yAxis: {
@@ -75,7 +76,8 @@ angular.module('charts')
             labels: {
                 format: '{value} gr'
             },
-            maxPadding: 0.2,
+            maxPadding: 0.2
+            /*
             plotLines: [{
                 color: 'black',
                 dashStyle: 'dot',
@@ -90,16 +92,16 @@ angular.module('charts')
                     x: -10
                 },
                 zIndex: 3
-            }]
+            }]*/
         },
 
         tooltip: {
             useHTML: true,
             headerFormat: '<table>',
-            pointFormat: '<tr><th colspan="2"><h3>{point.country}</h3></th></tr>' +
-                '<tr><th>Fat intake:</th><td>{point.x}g</td></tr>' +
-                '<tr><th>Sugar intake:</th><td>{point.y}g</td></tr>' +
-                '<tr><th>Obesity (adults):</th><td>{point.z}%</td></tr>',
+            pointFormat: '<tr><th colspan="2"><h3>{point.County}</h3></th></tr>' +
+                '<tr><th>Population:</th><td>{point.Population}g</td></tr>' +
+                '<tr><th>Business Lisences:</th><td>{point.BusinessLisences}g</td></tr>' +
+                '<tr><th>Crime:</th><td>{point.Crime}%</td></tr>',
             footerFormat: '</table>',
             followPointer: true
         },
@@ -112,7 +114,7 @@ angular.module('charts')
                 }
             }
         },
-        series:data
+        series:$scope.charts
 /*
         series: [{
             data: [
