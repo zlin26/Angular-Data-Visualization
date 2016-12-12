@@ -20,12 +20,13 @@ angular.module('charts')
             console.log('Error: ' + data);
           });
       }
-    $(function callChart() {
+    $(function callChart()
+        {
     Highcharts.chart('container', {
 
         chart: {
             type: 'bubble',
-            plotBorderWidth: 5,
+            plotBorderWidth: 1,
             zoomType: 'xy'
         },
 
@@ -34,7 +35,7 @@ angular.module('charts')
         },
 
         title: {
-            text: 'Woyebuzhidaojiaoshenmehao'
+            text: 'Sugar and fat intake per country'
         },
 
         subtitle: {
@@ -42,15 +43,13 @@ angular.module('charts')
         },
 
         xAxis: {
+            gridLineWidth: 1,
             title: {
-                text: 'Population'
+                text: 'Daily fat intake'
             },
             labels: {
-                format: '{value}'
+                format: '{value} gr'
             },
-            min: 10000
-            /*
-            ,
             plotLines: [{
                 color: 'black',
                 dashStyle: 'dot',
@@ -65,21 +64,19 @@ angular.module('charts')
                     text: 'Safe fat intake 65g/day'
                 },
                 zIndex: 3
-            }]*/
+            }]
         },
 
         yAxis: {
             startOnTick: false,
             endOnTick: false,
             title: {
-                text: 'BusinessLisences'
+                text: 'Daily sugar intake'
             },
             labels: {
-                format: '{value}'
+                format: '{value} gr'
             },
-            min: 10000
-            /*,
-            
+            maxPadding: 0.2,
             plotLines: [{
                 color: 'black',
                 dashStyle: 'dot',
@@ -94,16 +91,16 @@ angular.module('charts')
                     x: -10
                 },
                 zIndex: 3
-            }]*/
+            }]
         },
 
         tooltip: {
             useHTML: true,
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2"><h3>{point.County}</h3></th></tr>' +
-                '<tr><th>Population:</th><td>{point.Population}</td></tr>' +
-                '<tr><th>Business Lisences:</th><td>{point.BusinessLisences}</td></tr>' +
-                '<tr><th>Crime:</th><td>{point.Crime}</td></tr>',
+                '<tr><th>Population:</th><td>{point.Population}g</td></tr>' +
+                '<tr><th>BusinessLisences:</th><td>{point.BusinessLisences}g</td></tr>' +
+                '<tr><th>Crime:</th><td>{point.Crime}%</td></tr>',
             footerFormat: '</table>',
             followPointer: true
         },
@@ -116,7 +113,7 @@ angular.module('charts')
                 }
             }
         },
-        // I really do not know how to read json files here
+
         series: [{
             data: [
  {
@@ -1346,7 +1343,8 @@ angular.module('charts')
  }
 ]
         }]
-    });
-    });
+
+        });
+
     init();
 });
