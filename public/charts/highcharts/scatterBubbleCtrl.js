@@ -121,7 +121,7 @@ angular.module('charts')
         options.series[0].data = data;
         var chart = Highcharts.Chart(options);
         });
-}
+});
 /*
         series: [{
             data: [
@@ -143,7 +143,7 @@ angular.module('charts')
             ]
         }]
 */
-    });
-    };
+    }
+    }
     init();
 });
