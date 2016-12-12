@@ -54,8 +54,8 @@ app.get('/api/columnBar', function(req,res) {
 });
  connection.connect();
 console.log('Doing columnBar query');
-//A query for lineArea
-connection.query('SELECT * from collegesbystate',
+//A query for columnBar
+connection.query('SELECT * from columnBar',
       function(err, rows, fields) {
         if (err)
           //console.log('The solution is: ', rows);
@@ -78,7 +78,7 @@ app.get('/api/scatterBubble', function(req,res) {
  connection.connect();
 console.log('Doing scatterBubble query');
 //A query for lineArea
-connection.query('SELECT * from collegesbystate',
+connection.query('SELECT * from columnBar',
       function(err, rows, fields) {
         if (err)
           //console.log('The solution is: ', rows);

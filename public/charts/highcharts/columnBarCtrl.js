@@ -20,8 +20,26 @@ angular.module('charts')
             console.log('Error: ' + data);
           });
       }
-      $(function callChart() {
-    Highcharts.chart('container', {
+      (function callChart() {
+        var burglary = [];
+        //var date = [];
+        //var month =[];
+        var homicide =[];
+        var larceny = [];
+        var sex = [];
+
+        $scope.charts.forEach(function(value,key) 
+            {
+                //year.push(value.year);
+                //month.push(value.month);
+                //date.push(Date.UTC(value.year, value.month))
+                burglary.push(value.burglary);
+                homicide.push(value.homicide);
+                larceny.push(value.larceny);
+                sex.push(value.sexual_assault);
+            }
+        );
+        Highcharts.chart('container', {
         chart: {
             type: 'column'
         },
@@ -29,7 +47,7 @@ angular.module('charts')
             text: 'Stacked column chart'
         },
         xAxis: {
-            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+            categories: ['2011', '2012', '2013', '2014', '2015']
         },
         yAxis: {
             min: 0,
@@ -38,7 +56,7 @@ angular.module('charts')
             }
         },
         tooltip: {
-            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.2f}%)<br/>',
             shared: true
         },
         plotOptions: {
@@ -46,50 +64,26 @@ angular.module('charts')
                 stacking: 'percent'
             }
         },
-        series: [{
-            name: 'John',
-            data: [5, 3, 4, 7, 2]
-        }, {
-            name: 'Jane',
-            data: [2, 2, 3, 2, 1]
-        }, {
-            name: 'Joe',
-            data: [3, 4, 4, 2, 5]
-        }]
+        series:
+        [
+        {
+            name: 'Burglary',
+            data: burglary
+        },
+        {
+            name: "Homicide",
+            data: homicide
+        },
+        {
+            name: "Larceny",
+            data: larceny
+        },
+        {
+            name: "Sexual Assault",
+            data: sex
+        }
+        ]
     });
 });
-/*
-    function callChart() {
-      var state = [];
-      var numcolleges = [];
-      $scope.charts.forEach(function(value,key) {
-        console.log('value of value :', value);
-        state.push(value.state);
-        numcolleges.push(value.numcolleges);
-       });
-       console.log('state: ', state);
-       console.log('numcolleges: ', numcolleges);
-       Highcharts.chart('container', {
-            chart: {
-                type: 'column'
-            },
-            series: [{
-            name: 'States',
-            data: numcolleges
-            }],
-            title: {
-                text: 'States with number of colleges'
-            },
-            xAxis: {
-              categories: state
-            },
-            yAxis: {
-                title: {
-                    text: 'No of colleges'
-                }
-            }
-        });
-    }
-*/
     init();
     });
