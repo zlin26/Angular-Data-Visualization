@@ -1342,9 +1342,10 @@ angular.module('charts')
    "County": "yakima "
  }
 ]
-        }]
+}]
 
-        });
+});
 
     init();
+});
 });
