@@ -20,7 +20,7 @@ angular.module('charts')
             console.log('Error: ' + data);
           });
       }
-      (function callChart() {
+      function callChart() {
         var burglary = [];
         //var date = [];
         //var month =[];
@@ -84,6 +84,6 @@ angular.module('charts')
         }
         ]
     });
-});
+};
     init();
     });
