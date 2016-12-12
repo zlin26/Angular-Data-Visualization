@@ -7,7 +7,7 @@ angular.module('charts')
         serverCall();
       }
     function serverCall() {
-        $http.getJSON('/api/scatterBubble')
+        $http.get('/api/scatterBubble')
           .success(function(data) {
             //console.log('coming to the controller:', data);
             $scope.charts = {};
@@ -114,7 +114,7 @@ angular.module('charts')
                 }
             }
         },
-        series:$scope.charts
+        series:$.getJSON($scope.charts)
 /*
         series: [{
             data: [
