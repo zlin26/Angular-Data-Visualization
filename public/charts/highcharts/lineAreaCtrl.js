@@ -14,10 +14,10 @@ angular.module('charts')
             {
                 //year.push(value.year);
                 //month.push(value.month);
-                burglary.push(value.UTC_Date, value.burglary);
-                homicide.push(value.UTC_Date,value.homicide);
-                larceny.push(value.UTC_Date,value.larceny);
-                sex.push(value.UTC_Date,value.sexual_assault);
+                burglary.push(Date.UTC(value.year, value.month), value.burglary);
+                homicide.push(Date.UTC(value.year, value.month),value.homicide);
+                larceny.push(Date.UTC(value.year, value.month),value.larceny);
+                sex.push(Date.UTC(value.year, value.month),value.sexual_assault);
             }
         );
         console.log("burglary is", burglary);
@@ -39,7 +39,8 @@ angular.module('charts')
             },
             title: {
                 text: 'Date'
-            }
+            },
+            min: Date.UTC(2011,0)
         },
         yAxis: {
             title: {
