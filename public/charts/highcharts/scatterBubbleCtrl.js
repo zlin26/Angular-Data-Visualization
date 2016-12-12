@@ -49,7 +49,7 @@ angular.module('charts')
             labels: {
                 format: '{value} gr'
             }
-            /*,
+            ,
             plotLines: [{
                 color: 'black',
                 dashStyle: 'dot',
@@ -64,7 +64,7 @@ angular.module('charts')
                     text: 'Safe fat intake 65g/day'
                 },
                 zIndex: 3
-            }]*/
+            }]
         },
 
         yAxis: {
@@ -76,8 +76,8 @@ angular.module('charts')
             labels: {
                 format: '{value} gr'
             },
-            maxPadding: 0.2
-            /*
+            maxPadding: 0.2,
+            
             plotLines: [{
                 color: 'black',
                 dashStyle: 'dot',
@@ -92,7 +92,7 @@ angular.module('charts')
                     x: -10
                 },
                 zIndex: 3
-            }]*/
+            }]
         },
 
         tooltip: {
@@ -114,7 +114,7 @@ angular.module('charts')
                 }
             }
         },
-        series:$scope.charts
+        series:scope.charts
 /*
         series: [{
             data: [
