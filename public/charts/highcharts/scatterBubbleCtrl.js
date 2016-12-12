@@ -48,7 +48,8 @@ angular.module('charts')
             },
             labels: {
                 format: '{value}'
-            }
+            },
+            min:20000
             /*
             ,
             plotLines: [{
@@ -77,7 +78,7 @@ angular.module('charts')
             labels: {
                 format: '{value}'
             },
-            maxPadding: 0.2/*,
+            min:20000/*,
             
             plotLines: [{
                 color: 'black',
