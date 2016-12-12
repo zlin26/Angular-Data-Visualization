@@ -47,8 +47,9 @@ angular.module('charts')
                 text: 'Population'
             },
             labels: {
-                format: '{value} gr'
+                format: '{value}'
             }
+            /*
             ,
             plotLines: [{
                 color: 'black',
@@ -64,7 +65,7 @@ angular.module('charts')
                     text: 'Safe fat intake 65g/day'
                 },
                 zIndex: 3
-            }]
+            }]*/
         },
 
         yAxis: {
@@ -74,9 +75,9 @@ angular.module('charts')
                 text: 'BusinessLisences'
             },
             labels: {
-                format: '{value} gr'
+                format: '{value}'
             },
-            maxPadding: 0.2,
+            maxPadding: 0.2/*,
             
             plotLines: [{
                 color: 'black',
@@ -92,15 +93,15 @@ angular.module('charts')
                     x: -10
                 },
                 zIndex: 3
-            }]
+            }]*/
         },
 
         tooltip: {
             useHTML: true,
             headerFormat: '<table>',
             pointFormat: '<tr><th colspan="2"><h3>{point.County}</h3></th></tr>' +
-                '<tr><th>Population:</th><td>{point.Population}g</td></tr>' +
-                '<tr><th>Business Lisences:</th><td>{point.BusinessLisences}g</td></tr>' +
+                '<tr><th>Population:</th><td>{point.Population}</td></tr>' +
+                '<tr><th>Business Lisences:</th><td>{point.BusinessLisences}</td></tr>' +
                 '<tr><th>Crime:</th><td>{point.Crime}%</td></tr>',
             footerFormat: '</table>',
             followPointer: true
