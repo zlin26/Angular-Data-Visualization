@@ -32,10 +32,10 @@ angular.module('charts')
             type: 'spline'
         },
         title: {
-            text: 'Big Seattle Area Crime Amount'
+            text: 'Great Seattle Area Crime Amount from 2011-2015'
         },
         subtitle: {
-            text: 'Among Types'
+            text: 'Source: Seattle Open Data'
         },
         xAxis: {
             

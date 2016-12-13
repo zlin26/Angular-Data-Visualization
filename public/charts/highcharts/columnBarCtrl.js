@@ -44,7 +44,10 @@ angular.module('charts')
             type: 'column'
         },
         title: {
-            text: 'Stacked column chart'
+            text: 'Great Seattle Area Crime Proportion from 2011-2015'
+        },
+        subtitle: {
+            text: 'Source: Seattle Open Data'
         },
         xAxis: {
             categories: ['2011', '2012', '2013', '2014', '2015']
@@ -52,7 +55,7 @@ angular.module('charts')
         yAxis: {
             min: 0,
             title: {
-                text: 'Total fruit consumption'
+                text: 'Crime proportion'
             }
         },
         tooltip: {

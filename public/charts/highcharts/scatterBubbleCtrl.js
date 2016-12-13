@@ -34,11 +34,11 @@ angular.module('charts')
         },
 
         title: {
-            text: '!!!!!!!!!!!!!!'
+            text: 'Crime, Active Business License, and Population of Great Seattle Area 2011-2015'
         },
 
         subtitle: {
-            text: 'Source: <a href="http://www.euromonitor.com/">Euromonitor</a> and <a href="https://data.oecd.org/">OECD</a>'
+            text: 'Source: Seattle Open Data'
         },
 
         xAxis: {
